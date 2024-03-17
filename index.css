@@ -135,6 +135,7 @@ section.about{
 }
 section.about .left, section.about .right{
     width: 45%;
+    text-align: center;
 }
 section.about .right{
     width: 50%;
