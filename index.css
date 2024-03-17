@@ -138,6 +138,7 @@ section.about .left, section.about .right{
 }
 section.about .right{
     width: 50%;
+    display:none;
 }
 section.about .left h1{
     font-size: 2rem;
