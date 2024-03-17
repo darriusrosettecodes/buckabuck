@@ -1,0 +1,362 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5%;
+    background-color: rgb(59, 184, 59);
+    z-index: 12;
+}
+nav img{
+    height: 60px;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul#large-screen-nav li{
+    display: inline;
+    padding: 1rem;
+}
+nav ul#large-screen-nav li a{
+    text-decoration:none ;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+}
+nav ul#large-screen-nav li a:hover{
+    text-decoration: underline;
+}
+nav ul#small-screen-nav{
+    display: none;
+    background-color: green;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    text-align: center;
+    z-index: 999;
+}
+nav ul#small-screen-nav i.fa-xmark{
+    font-size: 2rem;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+nav ul#small-screen-nav img{
+    height: 50px;
+    margin-top: 25px;
+}
+nav ul#small-screen-nav ul li{
+    padding: 20px;
+}
+nav ul#small-screen-nav ul li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: white;
+}
+nav i.fa-bars{
+    display: none;
+    font-size: 1.3rem;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* MAIN */
+main{
+    position: relative;
+    height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.365)), url('images/main.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    padding: 1.5rem;
+    z-index: 11;
+}
+.text-overlay h3, .text-overlay h1{
+    margin-bottom: 1.2rem;
+}
+.text-overlay h3{
+    font-size: 1.5rem;
+}
+.text-overlay h1{
+    font-size: 3rem;
+}
+.text-overlay button{
+    padding: .7rem 2rem;
+    border-radius: 6px;
+    border: 3px solid green;
+    font-size: 1.2rem;
+    background-color: green;
+    color: white;
+    transition: .3s;
+}
+.text-overlay button:hover{
+    background-color: transparent;
+}
+.fade-in{
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in-out forwards;
+}
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0; /* Start opacity */
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1; /* End opacity */
+    }
+}
+
+/* ABOUT */
+section.about{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8% 10%;
+    overflow-x: hidden;
+}
+section.about .left, section.about .right{
+    width: 45%;
+}
+section.about .right{
+    width: 50%;
+}
+section.about .left h1{
+    font-size: 2rem;
+    margin-bottom:  1.5rem;
+    text-decoration: underline;
+    color: green;
+}
+section.about .left p{
+    font-size: 1.3rem;
+    color: black;
+    font-weight: 600;
+}
+section.about .right{
+    text-align: center;
+}
+section.about .right img{
+    height: 500px;
+    border-radius: 6px;
+}
+
+/* SERVICES */
+section.services{
+    text-align: center;
+    background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.365)), url('images/services-background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 2rem;
+}
+section.services h1{
+    font-size: 2.7rem;
+    padding: 2rem 0rem;
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(59, 184, 59);
+    text-shadow: 6px 3px 6px #000000;
+}
+section.services .services-cards{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem 0rem 0rem;
+}
+section.services .service-card{
+    text-align: center;
+    border: 1px solid white;
+    background-color: rgb(210, 255, 180);
+    border-radius: 6px;
+    display: inline-block;
+    margin: 20px;
+    width: 290px;
+    height: 400px;
+    position: relative;
+    padding: 10px;
+    transition: .3s;
+}
+section.services .service-card .service-card-cont{
+    position: absolute;
+    top: 50%;   
+    transform: translateY(-50%);
+    padding: 15px;
+}
+section.services .service-card i{
+    font-size: 2rem;
+    color: green;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+section.services .service-card h2{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+section.services .service-card p{
+    font-size: 1.2rem;
+    color: green;
+}
+section.services .service-card:hover{
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    background-color: rgb(59, 184, 59);
+}
+footer h1{
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+footer p{
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+footer a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+
+/* MEDIA QUERIES */
+/* Extra Small Devices (Phones) */
+@media only screen and (max-width: 575.98px) {
+    nav img{
+        height: 50px;
+    }
+    nav ul#large-screen-nav{
+        display: none;
+    } 
+    nav i.fa-bars{
+        display: block;
+    }
+
+    .text-overlay h3{
+        font-size: 1.1rem;
+    }
+    .text-overlay h1{
+        font-size: 2.5rem;
+    }
+    .text-overlay button{
+        padding: .5rem 2rem;
+    }
+
+    section.about{
+        flex-direction: column;
+    }
+    section.about .left{
+        margin-bottom: 3rem;
+    }
+    section.about .left, section.about .right{
+        width: 90%;
+    }
+    section.about .right img{
+        height: 300px;
+    }
+
+    section.services .services-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    section.services .service-card{
+        width: 260px;
+        height: 390px;
+        padding: 10px;
+    }
+    section.services .service-card i{
+        font-size: 1.8rem;
+    }
+    section.services .service-card h2{
+        font-size: 1.8rem;
+    }
+    section.services .service-card p{
+        font-size: 1.1rem;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .left h1{
+        font-size: 1.9rem;
+        margin-bottom: 1rem;
+    }
+    footer.left p{
+        margin-bottom: 1rem;
+        color: white;
+    }
+    footer .right a{
+        font-size: 1.7rem;
+    }
+}
+
+/* Small Devices (Tablets) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+    nav ul#large-screen-nav{
+        display: none;
+    } 
+    nav i.fa-bars{
+        display: block;
+    }
+
+    section.about{
+        flex-direction: column;
+    }
+    section.about .left{
+        margin-bottom: 3rem;
+    }
+    section.about .left, section.about .right{
+        width: 60%;
+        margin-top: 3rem;
+    }
+    section.about .left, section.about .right img{
+        height: 380px;
+    }
+
+    section.services .services-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer{
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .left h1{
+        font-size: 1.9rem;
+        margin-bottom: .5rem;
+    }
+    footer .left p{
+        margin-bottom: 1rem;
+    }
+    footer .right a{
+        font-size: 1.7rem;
+    }
+}
+
