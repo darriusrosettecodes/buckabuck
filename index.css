@@ -182,7 +182,6 @@ section.services .services-cards{
 }
 section.services .service-card{
     text-align: center;
-    border: 1px solid white;
     background-color: rgb(210, 255, 180);
     border-radius: 6px;
     display: inline-block;
