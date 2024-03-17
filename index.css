@@ -128,7 +128,7 @@ main{
 /* ABOUT */
 section.about{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 8% 10%;
     overflow-x: hidden;
