@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const contactBtn = document.querySelector('.contact-btn')
-const targetSection = document.querySelector('#section3')
+const targetSection = document.querySelector('#section4')
 
 contactBtn.addEventListener('click', function() {
     targetSection.scrollIntoView({
